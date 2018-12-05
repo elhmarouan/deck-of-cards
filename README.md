@@ -19,6 +19,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 Run `ng test --code-coverage` to execute unit tests with Coverage Summary.
+
 Run `http-server -c-1 -o -p 9875 ./coverage` to run the server that shows you your report.
 
 ## Running end-to-end tests
