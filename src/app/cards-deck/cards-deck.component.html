@@ -1,0 +1,35 @@
+<div>
+
+<div class="row">
+<div class="block" *ngFor="let card of cardsDeck">
+  <div class="card">
+    <div [className]="card.suit.color === 'red' ? 'front red' : 'front'">
+      <div class="index">{{card.value}}<br /><span [innerHtml]="card.suit.icon"></span></div>
+      <div class="ace"><span [innerHtml]="card.suit.icon"></span></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="row">
+  <div class="block">
+      <button (click)="shuffle()">Shuffle</button>
+  </div>
+  <div class="block">
+      <button (click)="dealOneCard()">Deal one Card</button>
+  </div>
+  <div class="block">
+      <button (click)="reset()">Reset</button>
+  </div>
+</div>
+
+<div class="row">
+    <div class="card" *ngIf="cardDealt">
+        <div [className]="cardDealt.suit.color === 'red' ? 'front red' : 'front'">
+          <div class="index">{{cardDealt.value}}<br /><span [innerHtml]="cardDealt.suit.icon"></span></div>
+          <div class="ace"><span [innerHtml]="cardDealt.suit.icon"></span></div>
+        </div>
+      </div>
+</div>
+
+</div>
